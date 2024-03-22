@@ -4,17 +4,27 @@
  */
 package hangmangamepdcassignment1;
 
+import java.util.Scanner;
+
 /**
  *
- * @author alist
+ * @author Alister
  */
 public class HangManGamePDCAssignment1 {
 
     /**
      * @param args the command line arguments
      */
+    
+    
+    //this file will be used as the main runner to run the code
     public static void main(String[] args) {
-        // TODO code application logic here
+        FileWriter fw = new FileWriter();
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("import text you want to add to the file:");
+        String text = scan.nextLine();
+        fw.write(text);
     }
     
 }
