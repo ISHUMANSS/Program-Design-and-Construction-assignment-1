@@ -18,6 +18,12 @@ import java.util.HashSet;
 //Reads all the words on the file 
 public class ReadFile {
     
+    HashSet<String> wordList;
+    
+    public ReadFile(){
+        this.wordList = read();
+    }    
+    
     public HashSet<String> read(){ 
     //I think somthing like A hash set could work because every element has to be unique to be unique
     //add to each item of the has set by reading from the file

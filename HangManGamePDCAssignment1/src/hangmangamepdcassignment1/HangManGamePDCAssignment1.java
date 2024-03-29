@@ -4,6 +4,7 @@
  */
 package hangmangamepdcassignment1;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 /**
@@ -20,11 +21,40 @@ public class HangManGamePDCAssignment1 {
     //this file will be used as the main runner to run the code
     public static void main(String[] args) {
         FileWriter fw = new FileWriter();
-        Scanner scan = new Scanner(System.in);
         
-        System.out.println("import text you want to add to the file:");
-        String text = scan.nextLine();
-        fw.write(text);
+        Scanner scan = new Scanner(System.in);
+        boolean game = true;
+        
+        while(game){
+            System.out.println("Game has started!");
+            System.out.println("what would you like to do?");
+            System.out.println("Add a word to the file (a)");
+            System.out.println("Pick a random word (r)");
+            System.out.println("Quit (x)");
+            try{
+                String answer = scan.nextLine();
+                if(answer.equalsIgnoreCase("x")){
+                    scan.close();
+                    game = false;
+                }
+                else if(answer.equalsIgnoreCase("a")){
+                    System.out.println("import text you want to add to the file:");
+                    String text = scan.nextLine();
+                    fw.write(text);
+                }
+                else if(answer.equalsIgnoreCase("r")){
+                    WordRandomiser wr = new WordRandomiser();
+                    System.out.println("Your random word is: " + wr.randomWord);
+                }
+                
+                
+            }
+            catch(NoSuchElementException E){
+                System.out.println("No such element exception please try again");
+            }
+            
+        }
+        
     }
     
 }
