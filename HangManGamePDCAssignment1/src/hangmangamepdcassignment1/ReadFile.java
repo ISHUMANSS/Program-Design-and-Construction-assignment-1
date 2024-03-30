@@ -25,9 +25,7 @@ public class ReadFile {
     }    
     
     public HashSet<String> read(){ 
-    //I think somthing like A hash set could work because every element has to be unique to be unique
-    //add to each item of the has set by reading from the file
-        
+    //using hashset makes it so even if there are any dupes in the file it only makes the items turn up onece in the file
         HashSet<String> wordsList = new HashSet<String>(); //used to make sure all Strings are unique
         try{
             FileReader fr = new FileReader("./resources/word_bank.txt");

@@ -34,7 +34,7 @@ public class HangManGamePDCAssignment1 {
             try{
                 String answer = scan.nextLine();
                 if(answer.equalsIgnoreCase("x")){
-                    scan.close();
+                    
                     game = false;
                 }
                 else if(answer.equalsIgnoreCase("a")){
@@ -46,6 +46,9 @@ public class HangManGamePDCAssignment1 {
                     WordRandomiser wr = new WordRandomiser();
                     System.out.println("Your random word is: " + wr.randomWord);
                 }
+                else{
+                    System.out.println("That wasn't one of the options please input again!");
+                }
                 
                 
             }
@@ -54,6 +57,7 @@ public class HangManGamePDCAssignment1 {
             }
             
         }
+        scan.close();
         
     }
     

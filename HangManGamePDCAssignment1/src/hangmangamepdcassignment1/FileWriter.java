@@ -20,7 +20,6 @@ public class FileWriter {
     public void write(String input){
         try{
             
-            //Will want it to check that every word is unique first
             pw = new PrintWriter(new FileOutputStream("./resources/word_bank.txt",true)); //appends the rather then replaces the text
             pw.println(input); //will print the inputed text to the file
             pw.close();
@@ -30,6 +29,7 @@ public class FileWriter {
             System.out.println(e.getMessage());
         }
     }
+    //using the hash set in the file reader file makes it so that words are allowed to be added to the set multiple times without it messing with how many times it turns up
     
     
 }
