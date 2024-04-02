@@ -45,6 +45,9 @@ public class HangManGamePDCAssignment1 {
                 else if(answer.equalsIgnoreCase("r")){
                     WordRandomiser wr = new WordRandomiser();
                     System.out.println("Your random word is: " + wr.randomWord);
+                    
+                    
+                    
                 }
                 else{
                     System.out.println("That wasn't one of the options please input again!");
