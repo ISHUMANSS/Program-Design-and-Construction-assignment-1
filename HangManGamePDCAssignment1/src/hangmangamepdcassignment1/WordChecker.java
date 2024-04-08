@@ -14,7 +14,7 @@ public class WordChecker extends WordRandomiser{
     
     //takes in the random word and the guess
     //keeps the index of each character that matches 
-    //uses an array or another collection to make it up to 2
+    //uses a hash map 
     //goes through the string and compares each letter of it to the letter of the guess
     public void wordCheck(Character guess){
         HashMap<Integer, Character> hm = new HashMap();

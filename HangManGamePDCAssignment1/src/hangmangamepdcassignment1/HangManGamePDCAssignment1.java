@@ -38,9 +38,20 @@ public class HangManGamePDCAssignment1 {
                     game = false;
                 }
                 else if(answer.equalsIgnoreCase("a")){
-                    System.out.println("import text you want to add to the file:");
-                    String text = scan.nextLine();
-                    fw.write(text);
+                    System.out.println("Would you like to replace all the text in the file? (yes/no)");
+                    String addTextAnswer = scan.nextLine();
+                    
+                    //extra check for if they want to replace all of the text in the file
+                    if(addTextAnswer.equalsIgnoreCase("yes")){
+                        System.out.println("import text you want to add to the file:");
+                        String text = scan.nextLine(); 
+                        fw.replaceAllWords(text);
+                    }
+                    else{//else just add the word into the file as normal
+                        System.out.println("import text you want to add to the file:");
+                        String text = scan.nextLine(); 
+                        fw.write(text);
+                    }
                 }
                 else if(answer.equalsIgnoreCase("r")){
                     WordRandomiser wr = new WordRandomiser();
